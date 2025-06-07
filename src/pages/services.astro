@@ -1,0 +1,294 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+import { getCollection } from "astro:content";
+
+const services = await getCollection("services");
+const technologies = await getCollection("technologies");
+---
+
+<Layout
+  title="Services - PixelPerfect"
+  description="Découvrez tous nos services : sites web, e-commerce, applications web, SEO et maintenance. Solutions sur mesure pour votre réussite digitale."
+>
+  <!-- Hero Section -->
+  <section
+    class="bg-gradient-to-br from-blue-600 to-purple-600 text-white py-20"
+  >
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">Nos Services</h1>
+        <p class="text-xl md:text-2xl text-blue-100 mb-8">
+          Solutions complètes pour votre réussite digitale
+        </p>
+        <p class="text-lg text-blue-100 max-w-3xl mx-auto">
+          De la création de sites vitrine aux applications web complexes, nous
+          vous accompagnons dans tous vos projets digitaux avec expertise et
+          passion.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-800 mb-6">
+          Ce que nous faisons
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Nous offrons une gamme complète de services digitaux, adaptés aux
+          besoins spécifiques de chaque client, des startups aux grandes
+          entreprises.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {
+          services.map((service) => (
+            <ServiceCard
+              title={service.data.title}
+              description={service.data.description}
+              icon={service.data.icon || ""}
+              features={service.data.features}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Technologies Section -->
+  <section class="bg-gray-50 py-20">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-800 mb-6">Technologies</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Nous maîtrisons les technologies les plus modernes pour créer des
+          solutions performantes et évolutives.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8">
+        {
+          technologies.map((tech) => (
+            <div class="text-center group">
+              <div class="w-16 h-16 bg-white rounded-xl shadow-lg flex items-center justify-center text-2xl mb-3 mx-auto group-hover:shadow-xl transition-shadow">
+                {tech.data.icon}
+              </div>
+              <p class="text-gray-700 font-medium">{tech.data.name}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-800 mb-6">Notre Processus</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Une méthodologie éprouvée pour garantir le succès de votre projet
+        </p>
+      </div>
+
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div
+              class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-6"
+            >
+              🎯
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">1. Analyse</h3>
+            <p class="text-gray-600">
+              Compréhension approfondie de vos besoins, objectifs et contraintes
+              pour définir la stratégie optimale.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div
+              class="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-6"
+            >
+              ✏️
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">2. Conception</h3>
+            <p class="text-gray-600">
+              Design UX/UI et architecture technique pensés pour offrir la
+              meilleure expérience utilisateur.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div
+              class="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-6"
+            >
+              ⚡
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">
+              3. Développement
+            </h3>
+            <p class="text-gray-600">
+              Réalisation avec les meilleures pratiques, tests rigoureux et
+              livraisons itératives.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div
+              class="w-20 h-20 bg-orange-600 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-6"
+            >
+              🚀
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">4. Lancement</h3>
+            <p class="text-gray-600">
+              Mise en ligne, formation et accompagnement pour assurer le succès
+              de votre projet.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="bg-gray-50 py-20">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-800 mb-6">Tarification</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Des solutions adaptées à tous les budgets, du projet personnel à
+          l'entreprise
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <!-- Starter -->
+        <div class="bg-white p-8 rounded-xl shadow-lg">
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Starter</h3>
+          <div class="text-4xl font-bold text-blue-600 mb-6">
+            À partir de 1 500€
+          </div>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center">
+              <span class="text-green-500 mr-2">✓</span> Site vitrine (5 pages)
+            </li>
+            <li class="flex items-center">
+              <span class="text-green-500 mr-2">✓</span> Design responsive
+            </li>
+            <li class="flex items-center">
+              <span class="text-green-500 mr-2">✓</span> Optimisation SEO de base
+            </li>
+            <li class="flex items-center">
+              <span class="text-green-500 mr-2">✓</span> Formulaire de contact
+            </li>
+            <li class="flex items-center">
+              <span class="text-green-500 mr-2">✓</span> Support 3 mois
+            </li>
+          </ul>
+          <a
+            href="/contact"
+            class="block w-full bg-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Choisir Starter
+          </a>
+        </div>
+
+        <!-- Professional -->
+        <div
+          class="bg-white p-8 rounded-xl shadow-lg border-2 border-blue-500 relative"
+        >
+          <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+            <span
+              class="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold"
+              >Populaire</span
+            >
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Professional</h3>
+          <div class="text-4xl font-bold text-blue-600 mb-6">
+            À partir de 3 500€
+          </div>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center">
+              <span class="text-green-500 mr-2">✓</span> Site complet (illimité)
+            </li>
+            <li class="flex items-center">
+              <span class="text-green-500 mr-2">✓</span> CMS intégré
+            </li>
+            <li class="flex items-center">
+              <span class="text-green-500 mr-2">✓</span> E-commerce (jusqu'à 100
+              produits)
+            </li>
+            <li class="flex items-center">
+              <span class="text-green-500 mr-2">✓</span> Optimisation SEO avancée
+            </li>
+            <li class="flex items-center">
+              <span class="text-green-500 mr-2">✓</span> Analytics intégrés
+            </li>
+            <li class="flex items-center">
+              <span class="text-green-500 mr-2">✓</span> Support 6 mois
+            </li>
+          </ul>
+          <a
+            href="/contact"
+            class="block w-full bg-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Choisir Professional
+          </a>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="bg-white p-8 rounded-xl shadow-lg">
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Enterprise</h3>
+          <div class="text-4xl font-bold text-blue-600 mb-6">Sur devis</div>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center">
+              <span class="text-green-500 mr-2">✓</span> Application web complexe
+            </li>
+            <li class="flex items-center">
+              <span class="text-green-500 mr-2">✓</span> Architecture scalable
+            </li>
+            <li class="flex items-center">
+              <span class="text-green-500 mr-2">✓</span> Intégrations sur mesure
+            </li>
+            <li class="flex items-center">
+              <span class="text-green-500 mr-2">✓</span> Formation équipe
+            </li>
+            <li class="flex items-center">
+              <span class="text-green-500 mr-2">✓</span> Support prioritaire 12 mois
+            </li>
+          </ul>
+          <a
+            href="/contact"
+            class="block w-full bg-gray-800 text-white text-center py-3 rounded-lg font-semibold hover:bg-gray-900 transition-colors"
+          >
+            Demander un devis
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section
+    class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20"
+  >
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-6">Prêt à démarrer votre projet ?</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">
+        Discutons de vos besoins et créons ensemble la solution parfaite pour
+        votre entreprise.
+      </p>
+      <a
+        href="/contact"
+        class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-lg inline-block"
+      >
+        Obtenir un devis gratuit
+      </a>
+    </div>
+  </section>
+</Layout>

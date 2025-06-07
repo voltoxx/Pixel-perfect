@@ -1,0 +1,533 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+---
+
+<Layout
+  title="À propos - PixelPerfect"
+  description="Découvrez l'histoire et l'équipe de PixelPerfect, agence web passionnée par l'innovation digitale."
+>
+  <!-- Hero Section -->
+  <section
+    class="bg-gradient-to-br from-blue-600 to-purple-600 text-white py-20"
+  >
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">
+          À propos de
+          <span
+            class="bg-gradient-to-r from-blue-200 to-purple-200 bg-clip-text text-transparent"
+          >
+            PixelPerfect
+          </span>
+        </h1>
+        <p class="text-xl md:text-3xl text-blue-100 mb-8 font-light">
+          Créateurs d'expériences digitales exceptionnelles depuis 2019
+        </p>
+        <p class="text-lg opacity-90">
+          Une équipe passionnée • Plus de 150 projets réalisés • 6 ans
+          d'expertise
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Notre Histoire avec Timeline -->
+  <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-5xl font-bold text-gray-800 mb-16 text-center">
+          Notre Histoire
+        </h2>
+
+        <!-- Timeline -->
+        <div class="relative">
+          <div
+            class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full rounded-full bg-gradient-to-b from-blue-500 via-purple-500 to-green-500"
+          >
+          </div>
+
+          <!-- 2019 - Fondation -->
+          <div class="flex items-center mb-16">
+            <div class="w-1/2 pr-8 text-right">
+              <div class="bg-white rounded-xl p-8 shadow-lg">
+                <h3 class="text-2xl font-bold text-blue-600 mb-3">
+                  2019 - Les débuts
+                </h3>
+                <p class="text-gray-600 leading-relaxed">
+                  Création de PixelPerfect par Alexandre, Marie et Thomas dans
+                  un petit bureau parisien. Premier client : une startup fintech
+                  innovante.
+                </p>
+              </div>
+            </div>
+            <div
+              class="w-8 h-8 bg-blue-600 rounded-full border-4 border-white shadow-lg flex-shrink-0 z-10"
+            >
+            </div>
+            <div class="w-1/2 pl-8">
+              <Image
+                src="https://images.unsplash.com/photo-1497366216548-37526070297c"
+                alt="Bureau startup"
+                width={500}
+                height={300}
+                class="rounded-xl shadow-lg"
+                quality={80}
+              />
+            </div>
+          </div>
+
+          <!-- 2020 - Croissance -->
+          <div class="flex items-center mb-16">
+            <div class="w-1/2 pr-8">
+              <Image
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978"
+                alt="Équipe au travail"
+                width={500}
+                height={300}
+                class="rounded-xl shadow-lg"
+                quality={80}
+              />
+            </div>
+            <div
+              class="w-8 h-8 bg-purple-600 rounded-full border-4 border-white shadow-lg flex-shrink-0 z-10"
+            >
+            </div>
+            <div class="w-1/2 pl-8">
+              <div class="bg-white rounded-xl p-8 shadow-lg">
+                <h3 class="text-2xl font-bold text-purple-600 mb-3">
+                  2020 - Expansion
+                </h3>
+                <p class="text-gray-600 leading-relaxed">
+                  Malgré la pandémie, nous avons su nous adapter et avons
+                  réalisé 30 projets cette année-là. Spécialisation dans
+                  l'e-commerce.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2022 - Nouveaux bureaux -->
+          <div class="flex items-center mb-16">
+            <div class="w-1/2 pr-8 text-right">
+              <div class="bg-white rounded-xl p-8 shadow-lg">
+                <h3 class="text-2xl font-bold text-green-600 mb-3">
+                  2022 - Nouveaux bureaux
+                </h3>
+                <p class="text-gray-600 leading-relaxed">
+                  Déménagement dans des bureaux modernes de 300m² dans le 11e
+                  arrondissement. L'équipe passe à 12 personnes.
+                </p>
+              </div>
+            </div>
+            <div
+              class="w-8 h-8 bg-green-600 rounded-full border-4 border-white shadow-lg flex-shrink-0 z-10"
+            >
+            </div>
+            <div class="w-1/2 pl-8">
+              <Image
+                src="https://images.unsplash.com/photo-1497366412874-3415097a27e7"
+                alt="Bureaux modernes"
+                width={500}
+                height={300}
+                class="rounded-xl shadow-lg"
+                quality={80}
+              />
+            </div>
+          </div>
+
+          <!-- 2024 - Aujourd'hui -->
+          <div class="flex items-center">
+            <div class="w-1/2 pr-8">
+              <Image
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c"
+                alt="Équipe actuelle"
+                width={500}
+                height={300}
+                class="rounded-xl shadow-lg"
+                quality={80}
+              />
+            </div>
+            <div
+              class="w-8 h-8 bg-orange-600 rounded-full border-4 border-white shadow-lg flex-shrink-0 z-10"
+            >
+            </div>
+            <div class="w-1/2 pl-8">
+              <div class="bg-white rounded-xl p-8 shadow-lg">
+                <h3 class="text-2xl font-bold text-orange-600 mb-3">
+                  2024 - Excellence
+                </h3>
+                <p class="text-gray-600 leading-relaxed">
+                  Aujourd'hui, nous sommes une équipe de 18 experts reconnus
+                  pour notre expertise en technologies modernes et notre
+                  approche centrée utilisateur.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nos Valeurs avec photos -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-5xl font-bold text-gray-800 mb-16 text-center">
+        Nos Valeurs
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div
+          class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+        >
+          <Image
+            src="https://images.unsplash.com/photo-1551434678-e076c223a692"
+            alt="Excellence"
+            width={300}
+            height={200}
+            class="w-full h-48 object-cover rounded-xl mb-6"
+            quality={80}
+          />
+          <div class="flex items-center mb-4">
+            <div
+              class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white text-xl mr-4"
+            >
+              🎯
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800">Excellence</h3>
+          </div>
+          <p class="text-gray-600 leading-relaxed">
+            Chaque projet est une opportunité de dépasser les attentes. Nous
+            visons l'excellence dans chaque détail, du code à l'expérience
+            utilisateur.
+          </p>
+        </div>
+
+        <div
+          class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+        >
+          <Image
+            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa"
+            alt="Innovation"
+            width={300}
+            height={200}
+            class="w-full h-48 object-cover rounded-xl mb-6"
+            quality={80}
+          />
+          <div class="flex items-center mb-4">
+            <div
+              class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white text-xl mr-4"
+            >
+              🚀
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800">Innovation</h3>
+          </div>
+          <p class="text-gray-600 leading-relaxed">
+            Nous explorons constamment les nouvelles technologies pour offrir
+            des solutions à la pointe de l'innovation digitale.
+          </p>
+        </div>
+
+        <div
+          class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+        >
+          <Image
+            src="https://images.unsplash.com/photo-1556761175-b413da4baf72"
+            alt="Collaboration"
+            width={300}
+            height={200}
+            class="w-full h-48 object-cover rounded-xl mb-6"
+            quality={80}
+          />
+          <div class="flex items-center mb-4">
+            <div
+              class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white text-xl mr-4"
+            >
+              🤝
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800">Collaboration</h3>
+          </div>
+          <p class="text-gray-600 leading-relaxed">
+            Nous croyons en la force du travail d'équipe, tant en interne
+            qu'avec nos clients, pour créer des solutions sur mesure.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Notre Équipe avec vraies photos -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-5xl font-bold text-gray-800 mb-16 text-center">
+        Notre Équipe
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <!-- Alexandre -->
+        <div
+          class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 text-center transition-all duration-300 ease-in-out hover:-translate-y-2.5 hover:shadow-2xl"
+        >
+          <Image
+            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
+            alt="Alexandre Dubois"
+            width={200}
+            height={200}
+            class="w-32 h-32 rounded-full mx-auto mb-6 shadow-lg border-4 border-white object-cover"
+            quality={80}
+          />
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Alexandre Dubois</h3>
+          <p class="text-blue-600 font-semibold mb-3">Fondateur & CTO</p>
+          <p class="text-gray-600 mb-4">
+            Expert React/Node.js avec 10 ans d'expérience. Ancien lead dev chez
+            une scale-up parisienne.
+          </p>
+          <div class="flex justify-center space-x-3">
+            <span
+              class="px-3 py-1 bg-blue-200 text-blue-800 rounded-full text-sm"
+              >React</span
+            >
+            <span
+              class="px-3 py-1 bg-green-200 text-green-800 rounded-full text-sm"
+              >Node.js</span
+            >
+            <span
+              class="px-3 py-1 bg-purple-200 text-purple-800 rounded-full text-sm"
+              >AWS</span
+            >
+          </div>
+        </div>
+
+        <!-- Marie -->
+        <div
+          class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 text-center transition-all duration-300 ease-in-out hover:-translate-y-2.5 hover:shadow-2xl"
+        >
+          <Image
+            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2"
+            alt="Marie Laurent"
+            width={200}
+            height={200}
+            class="w-32 h-32 rounded-full mx-auto mb-6 shadow-lg border-4 border-white object-cover"
+            quality={80}
+          />
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Marie Laurent</h3>
+          <p class="text-purple-600 font-semibold mb-3">Designer UX/UI Lead</p>
+          <p class="text-gray-600 mb-4">
+            Diplômée des Beaux-Arts, spécialisée en design d'expérience. 8 ans
+            chez des agences renommées.
+          </p>
+          <div class="flex justify-center space-x-3">
+            <span
+              class="px-3 py-1 bg-pink-200 text-pink-800 rounded-full text-sm"
+              >Figma</span
+            >
+            <span
+              class="px-3 py-1 bg-blue-200 text-blue-800 rounded-full text-sm"
+              >UI/UX</span
+            >
+            <span
+              class="px-3 py-1 bg-yellow-200 text-yellow-800 rounded-full text-sm"
+              >Webflow</span
+            >
+          </div>
+        </div>
+
+        <!-- Thomas -->
+        <div
+          class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 text-center transition-all duration-300 ease-in-out hover:-translate-y-2.5 hover:shadow-2xl"
+        >
+          <Image
+            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
+            alt="Thomas Martin"
+            width={200}
+            height={200}
+            class="w-32 h-32 rounded-full mx-auto mb-6 shadow-lg border-4 border-white object-cover"
+            quality={80}
+          />
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Thomas Martin</h3>
+          <p class="text-green-600 font-semibold mb-3">Chef de Projet</p>
+          <p class="text-gray-600 mb-4">
+            MBA HEC, ancien consultant McKinsey. Expert en transformation
+            digitale et méthodes agiles.
+          </p>
+          <div class="flex justify-center space-x-3">
+            <span
+              class="px-3 py-1 bg-green-200 text-green-800 rounded-full text-sm"
+              >Agile</span
+            >
+            <span
+              class="px-3 py-1 bg-blue-200 text-blue-800 rounded-full text-sm"
+              >Strategy</span
+            >
+            <span
+              class="px-3 py-1 bg-orange-200 text-orange-800 rounded-full text-sm"
+              >Scrum</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Témoignages -->
+  <section
+    class="py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50"
+  >
+    <div class="container mx-auto px-4">
+      <h2 class="text-5xl font-bold text-gray-800 mb-16 text-center">
+        Ce que disent nos clients
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div
+          class="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-8 shadow-lg"
+        >
+          <div class="flex items-center mb-6">
+            <Image
+              src="https://images.unsplash.com/photo-1560250097-0b93528c311a"
+              alt="Client"
+              width={60}
+              height={60}
+              class="w-12 h-12 rounded-full mr-4 object-cover"
+              quality={80}
+            />
+            <div>
+              <h4 class="font-bold text-gray-800">Sophie Durand</h4>
+              <p class="text-sm text-gray-500">CEO, TechStart</p>
+            </div>
+          </div>
+          <p class="text-gray-600 leading-relaxed italic">
+            "PixelPerfect a transformé notre vision en une plateforme
+            exceptionnelle. Leur expertise technique et leur sens du détail sont
+            remarquables."
+          </p>
+          <div class="flex mt-4">
+            <span class="text-yellow-400">★★★★★</span>
+          </div>
+        </div>
+
+        <div
+          class="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-8 shadow-lg"
+        >
+          <div class="flex items-center mb-6">
+            <Image
+              src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7"
+              alt="Client"
+              width={60}
+              height={60}
+              class="w-12 h-12 rounded-full mr-4 object-cover"
+              quality={80}
+            />
+            <div>
+              <h4 class="font-bold text-gray-800">Marc Lefevre</h4>
+              <p class="text-sm text-gray-500">Directeur, InnovateCorp</p>
+            </div>
+          </div>
+          <p class="text-gray-600 leading-relaxed italic">
+            "Une équipe professionnelle qui a su comprendre nos enjeux et livrer
+            une solution qui dépasse nos attentes. Je recommande vivement."
+          </p>
+          <div class="flex mt-4">
+            <span class="text-yellow-400">★★★★★</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Notre Bureau -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-5xl font-bold text-gray-800 mb-16 text-center">
+          Nos Bureaux
+        </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 class="text-3xl font-bold text-gray-800 mb-6">
+              Un espace de créativité
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-6">
+              Nos bureaux de 300m² dans le 11e arrondissement de Paris sont
+              conçus pour favoriser la créativité et la collaboration. Espaces
+              ouverts, salles de réunion modernes, et coin détente pour
+              l'équipe.
+            </p>
+            <div class="grid grid-cols-2 gap-4 mb-6">
+              <div class="text-center p-4 bg-blue-50 rounded-lg">
+                <div class="text-2xl font-bold text-blue-600">300m²</div>
+                <p class="text-sm text-gray-600">Surface totale</p>
+              </div>
+              <div class="text-center p-4 bg-purple-50 rounded-lg">
+                <div class="text-2xl font-bold text-purple-600">18</div>
+                <p class="text-sm text-gray-600">Places de travail</p>
+              </div>
+            </div>
+            <div class="text-gray-600">
+              <p class="mb-2">📍 11e arrondissement, Paris</p>
+              <p class="mb-2">🚇 Métro République (3 min à pied)</p>
+              <p>☕ Nombreux cafés et restaurants à proximité</p>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <Image
+              src="https://images.unsplash.com/photo-1497366216548-37526070297c"
+              alt="Bureaux PixelPerfect"
+              width={600}
+              height={300}
+              class="rounded-xl shadow-lg w-full"
+              quality={80}
+            />
+            <div class="grid grid-cols-2 gap-4">
+              <Image
+                src="https://images.unsplash.com/photo-1497366412874-3415097a27e7"
+                alt="Espace de travail"
+                width={300}
+                height={200}
+                class="rounded-lg shadow-md"
+                quality={80}
+              />
+              <Image
+                src="https://images.unsplash.com/photo-1497366754035-f200968a6e72"
+                alt="Salle de réunion"
+                width={300}
+                height={200}
+                class="rounded-lg shadow-md"
+                quality={80}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="relative py-20 overflow-hidden">
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700"
+    >
+    </div>
+    <div class="absolute inset-0 bg-black opacity-20"></div>
+
+    <div class="relative z-10 container mx-auto px-4 text-center text-white">
+      <h2 class="text-5xl font-bold mb-6">Prêt à démarrer votre projet ?</h2>
+      <p class="text-xl mb-8 max-w-3xl mx-auto">
+        Nous serions ravis de discuter de votre projet et de vous accompagner
+        dans sa réalisation. Contactez-nous pour un premier échange gratuit.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/contact"
+          class="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-blue-50 transition-colors text-lg inline-block shadow-lg"
+        >
+          Démarrer notre collaboration
+        </a>
+        <a
+          href="/portfolio"
+          class="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-colors text-lg inline-block"
+        >
+          Voir nos réalisations
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
