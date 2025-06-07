@@ -1,0 +1,103 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import { render } from "astro:content";
+
+export async function getStaticPaths() {
+    const posts = await getCollection("blog");
+    return posts.map((post) => ({
+        params: { slug: post.id },
+        props: { post },
+    }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<Layout
+    title={`${post.data.title} - PixelPerfect Blog`}
+    description={post.data.description}
+>
+    <!-- Hero Section -->
+    <section
+        class="bg-gradient-to-br from-blue-600 to-purple-600 text-white py-20"
+    >
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex items-center gap-4 mb-6">
+                    {
+                        post.data.tags &&
+                            post.data.tags.map((tag: string) => (
+                                <span class="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">
+                                    {tag}
+                                </span>
+                            ))
+                    }
+                </div>
+                <div class="flex items-start gap-2">
+                    {
+                        post.data.image && (
+                            <div class="flex text-4xl">{post.data.image}</div>
+                        )
+                    }
+                    <div>
+                        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                            {post.data.title}
+                        </h1>
+                        <div class="flex items-center gap-4 text-blue-100">
+                            <span class="font-medium">{post.data.author}</span>
+                            <span>•</span>
+                            <time datetime={post.data.date.toISOString()}>
+                                {
+                                    post.data.date.toLocaleDateString("fr-FR", {
+                                        year: "numeric",
+                                        month: "long",
+                                        day: "numeric",
+                                    })
+                                }
+                            </time>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <article class="max-w-3xl mx-auto px-4 py-8">
+        <div class="mx-auto">
+            <Content />
+        </div>
+    </article>
+
+    <!-- Newsletter Section -->
+    <section class="bg-gray-50 py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-4xl font-bold text-grey-800 mb-6">
+                    Restez informé
+                </h2>
+                <p class="text-xl text-grey-600 mb-8">
+                    Inscrivez-vous à notre newsletter pour recevoir nos derniers
+                    articles et les tendances du web directement dans votre
+                    boîte mail.
+                </p>
+                <form class="flex flex-col sm:flex-row gap-4">
+                    <input
+                        type="email"
+                        placeholder="Votre adresse email"
+                        class="flex-1 w-full px-6 py-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                        required
+                    />
+                    <button
+                        type="submit"
+                        class="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                    >
+                        S'inscrire
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+</Layout>

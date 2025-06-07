@@ -1,16 +1,334 @@
 ---
+import Layout from "../layouts/Layout.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
 
+const services = await getCollection("services");
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="PixelPerfect - Agence Web Moderne">
+  <!-- Hero Section avec animation et formes -->
+  <section
+    class="relative bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800 text-white overflow-hidden"
+  >
+    <!-- Formes décoratives -->
+    <div class="absolute inset-0">
+      <div
+        class="absolute top-20 left-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"
+      >
+      </div>
+      <div
+        class="absolute bottom-20 right-10 w-60 h-60 bg-purple-500/20 rounded-full blur-3xl"
+      >
+      </div>
+    </div>
+
+    <div class="container mx-auto px-4 py-32 relative">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1
+          class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent animate-[fadeIn_1s_ease-out]"
+        >
+          PixelPerfect
+        </h1>
+        <p class="text-xl md:text-2xl mb-4 text-blue-100 animate-slide-up">
+          Agence Web Moderne
+        </p>
+        <p
+          class="text-lg md:text-xl mb-12 text-blue-100 max-w-3xl mx-auto leading-relaxed animate-fade-in"
+        >
+          Nous créons des expériences digitales exceptionnelles qui transforment
+          vos idées en solutions web performantes et attractives.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-6 justify-center">
+          <a
+            href="/contact"
+            class="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-blue-50"
+          >
+            <span class="flex items-center justify-center gap-2">
+              Démarrer votre projet
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </span>
+          </a>
+          <a
+            href="/services"
+            class="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-white hover:text-blue-600 hover:scale-105 hover:shadow-xl"
+          >
+            Découvrir nos services
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistiques en parallax -->
+  <section class="py-20 bg-white relative overflow-hidden">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+        <div class="p-8">
+          <div
+            class="text-5xl font-extrabold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent"
+          >
+            150+
+          </div>
+          <p class="text-xl font-semibold text-gray-700 mt-2">
+            Projets réalisés
+          </p>
+          <p class="text-gray-500">Sites web et applications</p>
+        </div>
+        <div class="p-8">
+          <div
+            class="text-5xl font-extrabold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent"
+          >
+            6
+          </div>
+          <p class="text-xl font-semibold text-gray-700 mt-2">
+            Années d'expérience
+          </p>
+          <p class="text-gray-500">Innovation continue</p>
+        </div>
+        <div class="p-8">
+          <div
+            class="text-5xl font-extrabold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent"
+          >
+            98%
+          </div>
+          <p class="text-xl font-semibold text-gray-700 mt-2">
+            Clients satisfaits
+          </p>
+          <p class="text-gray-500">Taux de satisfaction</p>
+        </div>
+        <div class="p-8">
+          <div
+            class="text-5xl font-extrabold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent"
+          >
+            24/7
+          </div>
+          <p class="text-xl font-semibold text-gray-700 mt-2">Support client</p>
+          <p class="text-gray-500">Accompagnement continu</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section avec cards améliorées -->
+  <section class="py-32 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-20">
+        <span
+          class="text-blue-600 font-semibold text-sm tracking-wider uppercase mb-2 block"
+          >Nos Services</span
+        >
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+          Solutions sur mesure
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Nous offrons une gamme complète de services pour répondre à tous vos
+          besoins digitaux, de la conception à la maintenance de vos projets
+          web.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {
+          services.map((service) => (
+            <div class="hover:scale-105 transition-transform duration-300">
+              <ServiceCard
+                title={service.data.title}
+                description={service.data.description}
+                icon={service.data.icon || ""}
+                features={service.data.features}
+              />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="py-32 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-20 animate-fade-up">
+        <span
+          class="text-purple-600 font-semibold text-sm tracking-wider uppercase mb-2 block"
+          >Pourquoi PixelPerfect</span
+        >
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+          Ce qui nous différencie
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Découvrez les avantages de travailler avec notre équipe d'experts
+          passionnés par l'innovation digitale.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+        <div class="animate-slide-left">
+          <img
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop"
+            alt="Équipe collaborative"
+            class="rounded-2xl shadow-2xl w-full"
+          />
+        </div>
+        <div class="animate-slide-right">
+          <h3 class="text-3xl font-bold text-gray-800 mb-6">
+            Une équipe d'experts passionnés
+          </h3>
+          <p class="text-gray-600 mb-8 text-lg leading-relaxed">
+            Notre équipe de 18 spécialistes combine créativité, expertise
+            technique et vision business pour créer des solutions digitales qui
+            marquent la différence.
+          </p>
+          <div class="grid grid-cols-2 gap-6">
+            <div class="text-center p-6 bg-blue-50 rounded-xl">
+              <div class="text-3xl font-bold text-blue-600 mb-2">18</div>
+              <p class="text-sm text-gray-600">Experts</p>
+            </div>
+            <div class="text-center p-6 bg-purple-50 rounded-xl">
+              <div class="text-3xl font-bold text-purple-600 mb-2">10+</div>
+              <p class="text-sm text-gray-600">Technologies</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        <div
+          class="why-us-card text-center p-8 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl"
+        >
+          <div
+            class="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center text-white text-2xl mx-auto mb-6"
+          >
+            ⚡
+          </div>
+          <h4 class="text-xl font-bold text-gray-800 mb-4">Livraison rapide</h4>
+          <p class="text-gray-600 text-sm">
+            Méthodes agiles pour des livraisons rapides et itératives qui
+            respectent vos délais.
+          </p>
+        </div>
+
+        <div
+          class="why-us-card text-center p-8 bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl"
+        >
+          <div
+            class="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center text-white text-2xl mx-auto mb-6"
+          >
+            🏆
+          </div>
+          <h4 class="text-xl font-bold text-gray-800 mb-4">Qualité premium</h4>
+          <p class="text-gray-600 text-sm">
+            Code propre, design pixel-perfect et tests rigoureux pour une
+            qualité irréprochable.
+          </p>
+        </div>
+
+        <div
+          class="why-us-card text-center p-8 bg-gradient-to-br from-green-50 to-green-100 rounded-2xl"
+        >
+          <div
+            class="w-16 h-16 bg-green-600 rounded-xl flex items-center justify-center text-white text-2xl mx-auto mb-6"
+          >
+            🤝
+          </div>
+          <h4 class="text-xl font-bold text-gray-800 mb-4">Accompagnement</h4>
+          <p class="text-gray-600 text-sm">
+            Support personnalisé et formation pour vous autonomiser sur votre
+            solution.
+          </p>
+        </div>
+
+        <div
+          class="why-us-card text-center p-8 bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl"
+        >
+          <div
+            class="w-16 h-16 bg-orange-600 rounded-xl flex items-center justify-center text-white text-2xl mx-auto mb-6"
+          >
+            💡
+          </div>
+          <h4 class="text-xl font-bold text-gray-800 mb-4">Innovation</h4>
+          <p class="text-gray-600 text-sm">
+            Technologies cutting-edge et veille constante pour des solutions
+            avant-gardistes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section améliorée -->
+  <section
+    class="relative bg-gradient-to-r from-blue-600 to-purple-600 text-white py-32 overflow-hidden"
+  >
+    <div class="container mx-auto px-4 text-center relative">
+      <h2 class="text-4xl md:text-5xl font-bold mb-8">
+        Prêt à démarrer votre projet ?
+      </h2>
+      <p class="text-xl mb-12 max-w-2xl mx-auto">
+        Contactez-nous dès aujourd'hui pour discuter de vos besoins et obtenir
+        un devis personnalisé gratuit.
+      </p>
+      <a
+        href="/contact"
+        class="group bg-white text-blue-600 px-10 py-5 rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl inline-flex items-center gap-2"
+      >
+        Obtenir un devis gratuit
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5 group-hover:translate-x-1 transition-transform"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+        </svg>
+      </a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 1s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.8s ease-out;
+  }
+</style>
