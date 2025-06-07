@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "title": "Sites Web Vitrine",
+        "description": "Créez une présence en ligne professionnelle avec nos sites vitrine modernes et optimisés.",
+        "icon": "🌐",
+        "features": [
+            "Design responsive et moderne",
+            "Optimisation SEO avancée",
+            "Performance web optimisée",
+            "Intégration CMS (WordPress/Strapi)",
+            "Analytics et suivi",
+            "Support et maintenance"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "E-commerce",
+        "description": "Solutions complètes pour vendre en ligne avec des plateformes performantes et sécurisées.",
+        "icon": "🛒",
+        "features": [
+            "Catalogue produits avancé",
+            "Paiement sécurisé (Stripe, PayPal)",
+            "Gestion des stocks",
+            "Tableau de bord marchand",
+            "Marketing automation",
+            "Multi-devises et langues"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Applications Web",
+        "description": "Développement d'applications web complexes et interactives selon vos spécifications.",
+        "icon": "⚡",
+        "features": [
+            "React, Vue.js, Angular",
+            "APIs REST et GraphQL",
+            "Base de données optimisée",
+            "Authentification sécurisée",
+            "Architecture scalable",
+            "Tests automatisés"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Refonte & Modernisation",
+        "description": "Modernisez votre site existant avec les dernières technologies et meilleures pratiques.",
+        "icon": "🔄",
+        "features": [
+            "Audit technique complet",
+            "Migration de données",
+            "Amélioration des performances",
+            "Mise à jour sécuritaire",
+            "Formation utilisateur",
+            "Documentation technique"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Optimisation SEO",
+        "description": "Améliorez votre visibilité en ligne avec nos services d'optimisation SEO avancés.",
+        "icon": "📈",
+        "features": [
+            "Audit SEO technique",
+            "Optimisation on-page",
+            "Stratégie de contenu",
+            "Link building",
+            "Suivi des performances",
+            "Rapports mensuels"
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Maintenance & Support",
+        "description": "Assurez la pérennité de votre site avec nos services de maintenance professionnels.",
+        "icon": "🛠️",
+        "features": [
+            "Mises à jour sécuritaires",
+            "Sauvegardes automatiques",
+            "Monitoring 24/7",
+            "Support technique rapide",
+            "Optimisations continues",
+            "Rapports de performance"
+        ]
+    }
+]

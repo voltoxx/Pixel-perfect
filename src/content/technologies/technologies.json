@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "React",
+        "icon": "⚛️"
+    },
+    {
+        "id": 2,
+        "name": "Vue.js",
+        "icon": "💚"
+    },
+    {
+        "id": 3,
+        "name": "Astro",
+        "icon": "🚀"
+    },
+    {
+        "id": 4,
+        "name": "Node.js",
+        "icon": "🟢"
+    },
+    {
+        "id": 5,
+        "name": "TypeScript",
+        "icon": "🔷"
+    },
+    {
+        "id": 6,
+        "name": "Tailwind CSS",
+        "icon": "🎨"
+    },
+    {
+        "id": 7,
+        "name": "WordPress",
+        "icon": "📝"
+    },
+    {
+        "id": 8,
+        "name": "Strapi",
+        "icon": "📊"
+    }
+]
