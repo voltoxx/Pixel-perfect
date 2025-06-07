@@ -176,10 +176,13 @@ const services = await getCollection("services");
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
         <div class="animate-slide-left">
-          <img
-            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop"
+          <Image
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop&fm=webp"
+            width={400}
+            height={300}
             alt="Équipe collaborative"
             class="rounded-2xl shadow-2xl w-full"
+            quality={80}
           />
         </div>
         <div class="animate-slide-right">
